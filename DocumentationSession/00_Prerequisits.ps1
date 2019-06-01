@@ -19,3 +19,6 @@ foreach ($M in $Modules) {
         Install-Module -Name -Force
     }
 }
+
+# This is part of PSSharedGoods
+Install-WinConnectity -All

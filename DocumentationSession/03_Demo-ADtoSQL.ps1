@@ -100,6 +100,7 @@ $Document = [ordered]@{
                     ExcelWorkSheet = '<Domain> - Users System'
                     ExcelData      = [PSWinDocumentation.ActiveDirectory]::DomainUsersSystemAccounts
                 }
+                <#
                 SectionExcelDomainUsersNeverExpiring  = [ordered] @{
                     Use                   = $true
                     ExcelExport           = $false
@@ -185,6 +186,7 @@ $Document = [ordered]@{
                     SqlTable              = 'dbo.[DomainGroupsSpecial]'
                     SqlTableAlterIfNeeded = $true
                 }
+                #>
             }
         }
 
