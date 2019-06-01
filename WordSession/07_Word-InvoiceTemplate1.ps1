@@ -1,10 +1,9 @@
 ﻿Import-Module PSWriteWord #-Force
 
 $FilePathTemplate = "$PSScriptRoot\Templates\WordTemplate-Invoice.docx"
-$FilePathInvoice = "$PSScriptRoot\PSWriteWord-Example-TemplateCreateInvoice1.docx"
+$FilePathInvoice = "$PSScriptRoot\07_Word-InvoiceTemplate.docx"
 
 $WordDocument = Get-WordDocument -FilePath $FilePathTemplate
-#$WordDocument
 
 Add-WordCustomProperty -WordDocument $WordDocument -Name 'CompanyName'  -Value 'Evotec' -Supress $True
 Add-WordCustomProperty -WordDocument $WordDocument -Name 'CompanySlogan'  -Value 'IT Consultants' -Supress $True

@@ -5,21 +5,24 @@ $FilePath = "$Env:USERPROFILE\Desktop\PSWriteWord-Example-Tables4.docx"
 #Clear-Host
 $WordDocument = New-WordDocument $FilePath
 
-$InvoiceEntry1 = @{}
+$InvoiceEntry1 = @{ }
 $InvoiceEntry1.Description = 'IT Services'
 $InvoiceEntry1.Amount = '$200'
 
-$InvoiceEntry2 = @{}
+$InvoiceEntry2 = @{ }
 $InvoiceEntry2.Description = 'IT Services'
 $InvoiceEntry2.Amount = '$200'
 
-$InvoiceData = @()
-$InvoiceData += $InvoiceEntry1
-$InvoiceData += $InvoiceEntry2
-
+$InvoiceData = @(
+    $InvoiceEntry1
+    $InvoiceEntry2
+)
 
 $Table = New-WordTable -WordDocument $WordDocument -NrRows 5 -NrColumns 3
 
+Add-WordText -WordDocument $WordDocument -Paragraph $Table.Paragraphs[1] -Text 'Test'
+
+<#
 $BorderTypeTop = New-WordTableBorder -BorderStyle Tcbs_dotted -BorderSize two -BorderSpace 0 -BorderColor Blue
 $BorderTypeBottom = New-WordTableBorder -BorderStyle Tcbs_single -BorderSize one -BorderSpace 0 -BorderColor Red
 $BorderTypeLeft = New-WordTableBorder -BorderStyle Tcbs_dashed -BorderSize two -BorderSpace 0 -BorderColor Blue
@@ -36,8 +39,8 @@ Set-WordTableBorder -Table $Table -TableBorderType Left -Border $BorderTypeLeft 
 Set-WordTableBorder -Table $Table -TableBorderType Right -Border $BorderTypeRight -Supress $True
 Set-WordTableBorder -Table $Table -TableBorderType InsideH -Border $BorderTypeInsideH -Supress $True
 Set-WordTableBorder -Table $Table -TableBorderType InsideV -Border $BorderTypeInsideV -Supress $True
-
-#Add-WordText -WordDocument $WordDocument -Text "Invoice Data" -FontSize 15
+#>
+Add-WordText -WordDocument $WordDocument -Text "Invoice Data" -FontSize 15
 #Add-WordParagraph -WordDocument $WordDocument
 
 

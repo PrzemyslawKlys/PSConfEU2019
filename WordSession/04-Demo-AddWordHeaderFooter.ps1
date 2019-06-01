@@ -1,6 +1,6 @@
-Import-Module ..\PSWriteWord -Force
+Import-Module PSWriteWord -Force
 
-$FilePath = "$Env:USERPROFILE\Desktop\PSWriteWord-Example-AddWordHeaderFooter.docx"
+$FilePath = "$PSScriptRoot\04-Demo.docx"
 
 ### define new document
 $WordDocument = New-WordDocument $FilePath -Verbose

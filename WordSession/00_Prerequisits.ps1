@@ -1,7 +1,7 @@
-﻿# Modules that will be needed for 1st part of the session
+﻿# Modules that will be needed for this session
 $Modules = @(
     'PSWriteWord'
-    'PSSharedGoods'
+    'Documentimo'
 )
 
 foreach ($M in $Modules) {

@@ -1,6 +1,6 @@
 Import-Module PSWriteWord -Force
 
-$FilePath = "$Env:USERPROFILE\Desktop\PSWriteWord-Example-CreateWord2.docx"
+$FilePath = "$PSScriptRoot\03-Demo.docx"
 
 $WordDocument = New-WordDocument $FilePath
 $p1 = Add-WordText -WordDocument $WordDocument -Text 'This is a text aligned to center with Set-WordParagraph' -FontSize 10 -Spacingafter 50

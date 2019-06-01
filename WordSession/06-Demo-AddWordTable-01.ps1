@@ -1,6 +1,6 @@
 Import-Module PSWriteWord -Force
 
-$FilePath = "$Env:USERPROFILE\Desktop\PSWriteWord-Example-Tables5.docx"
+$FilePath = "$PSScriptRoot\06-Demo-01.docx"
 
 $myitems = @(
     [pscustomobject]@{name = "Joe"; age = 32; info = "Cat lover"},
@@ -20,7 +20,4 @@ Add-WordParagraph -WordDocument $WordDocument -Supress $True
 
 Add-WordTable -WordDocument $WordDocument -DataTable $myitems1 -Design ColorfulList -Supress $True #-Verbose
 
-Save-WordDocument $WordDocument -Language 'en-US' -Supress $True
-
-### Start Word with file
-Invoke-Item $FilePath
+Save-WordDocument $WordDocument -Language 'en-US' -Supress $True -OpenDocument

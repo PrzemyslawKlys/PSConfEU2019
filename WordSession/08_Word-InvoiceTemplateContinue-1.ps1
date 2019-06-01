@@ -2,7 +2,7 @@ Import-Module PSWriteWord #-Force
 
 ### Before running this script make sure to run Example-CreateWord first
 $FilePathTemplate = "$PSScriptRoot\Templates\WordTemplate-InvoiceWithLogo.docx"
-$FilePathInvoice = "$Env:USERPROFILE\Desktop\PSWriteWord-Example-TemplateCreateInvoice2.docx"
+$FilePathInvoice = "$PSScriptRoot\08_Word-InvoiceTemplate.docx"
 
 $FilePathImage = "$PSScriptRoot\Images\Logo-Evotec-Small.jpg"
 
@@ -32,6 +32,6 @@ $ParagraphThatHasPicture = $ParagraphsWithPictures[0]
 #Add-WordPicture -WordDocument $WordDocument -Paragraph $ParagraphsWithPictures[0] -ImagePath $FilePathImage -ImageWidth 100 -ImageHeight 30
 
 ### Or you can do it as one command, keep in mind you can skip imagewidth/imageheight but I wanted to resize logo a bit
-Set-WordPicture -WordDocument $WordDocument -Paragraph $ParagraphThatHasPicture -ImagePath $FilePathImage -ImageWidth 100 -ImageHeight 40
+Set-WordPicture -WordDocument $WordDocument -Paragraph $ParagraphThatHasPicture -ImagePath $FilePathImage -ImageWidth 00 -ImageHeight 40
 
 Save-WordDocument -WordDocument $WordDocument -FilePath $FilePathInvoice -Supress $True -OpenDocument
