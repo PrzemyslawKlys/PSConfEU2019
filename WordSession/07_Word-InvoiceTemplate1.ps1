@@ -1,10 +1,7 @@
 ﻿Import-Module PSWriteWord #-Force
 
-### Before running this script make sure to run Example-CreateWord first
-$ModuleBase = (get-module -ListAvailable PSWriteWord).ModuleBase
-
-$FilePathTemplate = "$ModuleBase\Templates\WordTemplate-Invoice.docx"
-$FilePathInvoice = "$Env:USERPROFILE\Desktop\PSWriteWord-Example-TemplateCreateInvoice1.docx"
+$FilePathTemplate = "$PSScriptRoot\Templates\WordTemplate-Invoice.docx"
+$FilePathInvoice = "$PSScriptRoot\PSWriteWord-Example-TemplateCreateInvoice1.docx"
 
 $WordDocument = Get-WordDocument -FilePath $FilePathTemplate
 #$WordDocument
