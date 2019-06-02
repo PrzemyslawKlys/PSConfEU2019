@@ -9,7 +9,6 @@ if ($null -eq $DataSetEvents) {
 
 $UserNotify = 'Przemyslaw Klys'
 
-# Email -FilePath "$PSScriptRoot\11-Demo.html" {
 Email -FilePath "$PSScriptRoot\11-Demo.html" {
     EmailHeader {
         EmailFrom -Address 'testO365@evotec.xyz'

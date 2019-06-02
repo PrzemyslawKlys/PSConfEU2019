@@ -5,9 +5,11 @@ $ApplicationID = Get-Content -LiteralPath "C:\Support\Important\O365-Application
 $ApplicationKey = Get-Content -LiteralPath "C:\Support\Important\O365-ApplicationKey.txt"
 $TenantDomain = 'evotec.pl' # CustomDomain (onmicrosoft.com won't work), alternatively you can use DirectoryID
 
-$O365 = Get-Office365Health -ApplicationID $ApplicationID -ApplicationKey $ApplicationKey -TenantDomain $TenantDomain -ToLocalTime -Verbose
+if (-not $O365) {
+    $O365 = Get-Office365Health -ApplicationID $ApplicationID -ApplicationKey $ApplicationKey -TenantDomain $TenantDomain -ToLocalTime -Verbose
+}
 
-Dashboard -FilePath $PSScriptRoot\Health.html -Show {
+Dashboard -FilePath "$PSScriptRoot\12-Demo.html" -Show {
     Tab -Name 'Services' {
         Section -Invisible {
             Section -Name 'Service List' {

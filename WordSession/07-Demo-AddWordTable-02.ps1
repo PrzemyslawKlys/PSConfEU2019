@@ -17,7 +17,7 @@ $InvoiceDataOrdered2 = @(
 
 
 Import-Module PSWriteWord #-Force
-$FilePath = "$PSScriptRoot\06-Demo-02.docx"
+$FilePath = "$PSScriptRoot\07-Demo-02.docx"
 
 $WordDocument = New-WordDocument $FilePath
 Add-WordTable -WordDocument $WordDocument -DataTable $InvoiceDataOrdered1 -Design ColorfulGrid -Supress $true -Transpose

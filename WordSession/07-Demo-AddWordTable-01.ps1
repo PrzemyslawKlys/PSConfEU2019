@@ -1,6 +1,6 @@
 Import-Module PSWriteWord -Force
 
-$FilePath = "$PSScriptRoot\06-Demo-01.docx"
+$FilePath = "$PSScriptRoot\07-Demo-01.docx"
 
 $myitems = @(
     [pscustomobject]@{name = "Joe"; age = 32; info = "Cat lover"},

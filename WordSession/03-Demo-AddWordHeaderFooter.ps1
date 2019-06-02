@@ -1,6 +1,6 @@
 Import-Module PSWriteWord -Force
 
-$FilePath = "$PSScriptRoot\04-Demo.docx"
+$FilePath = "$PSScriptRoot\03-Demo.docx"
 
 ### define new document
 $WordDocument = New-WordDocument $FilePath -Verbose

@@ -1,6 +1,6 @@
 Import-Module PSWriteWord -Force
 
-$FilePath = "$PSScriptRoot\03-Demo.docx"
+$FilePath = "$PSScriptRoot\02-Demo-02.docx"
 
 $WordDocument = New-WordDocument $FilePath
 $p1 = Add-WordText -WordDocument $WordDocument -Text 'This is a text aligned to center with Set-WordParagraph' -FontSize 10 -Spacingafter 50
@@ -28,7 +28,4 @@ Add-WordParagraph -WordDocument $WordDocument -Supress $True # Adds an empty lin
 
 Add-WordText -WordDocument $WordDocument -Text 'But you can actually just use one line to do Alingment and direction at same time' -FontSize 10 -Alignment Center -Direction LeftToRight -Supress $True
 
-Save-WordDocument $WordDocument -Supress $True
-
-### Start Word with file
-Invoke-Item $FilePath
+Save-WordDocument $WordDocument -Supress $True -OpenDocument
