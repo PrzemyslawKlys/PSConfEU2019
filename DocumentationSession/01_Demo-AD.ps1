@@ -2,7 +2,7 @@
 Import-Module PSWinDocumentation.AD
 Import-Module PSWriteExcel
 Import-Module DbaTools # (if you require SQL export)
-Import-Module PSWriteWord -Force
+Import-Module PSWriteWord -RequiredVersion 0.7.2 -Force
 Import-Module PSWriteExcel -Force
 
 $Document = [ordered]@{

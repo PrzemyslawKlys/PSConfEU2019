@@ -1,4 +1,4 @@
-﻿Import-Module PSWriteWord -Force
+﻿Import-Module PSWriteWord -RequiredVersion 0.7.2 -Force
 Import-Module PSWinDocumentation -Force
 
 $Document = [ordered]@{
