@@ -12,6 +12,4 @@ foreach ($Section in $ListOfHeaders) {
 $Paragraph = $WordDocument | Add-WordTocItem -Text 'Adding another one' -ListLevel 0 -ListItemType Numbered -HeadingType Heading1
 $Paragraph = $WordDocument | Add-WordText -Text 'This is my test - outside of loop. Added after TOC Item.' -Color Red
 
-$WordDocument | Save-WordDocument -Language 'en-US' -Supress $True
-### Start Word with file
-Invoke-Item $FilePath
+$WordDocument | Save-WordDocument -Language 'en-US' -Supress $True -OpenDocument

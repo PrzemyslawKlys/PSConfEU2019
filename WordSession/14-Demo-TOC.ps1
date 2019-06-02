@@ -21,6 +21,4 @@ $Paragraph = $WordDocument | Add-WordText -Text 'This is my test. Added after TO
 $Paragraph = $WordDocument | Add-WordTocItem -Text 'Adding another one' -ListLevel 3 -ListItemType Numbered -HeadingType Heading3
 $Paragraph = $WordDocument | Add-WordText -Text 'This is my test - outside of loop. Added after TOC Item.' -Color Red
 
-$WordDocument | Save-WordDocument -Language 'en-US' -Supress $True
-### Start Word with file
-Invoke-Item $FilePath
+$WordDocument | Save-WordDocument -Language 'en-US' -Supress $True -OpenDocument

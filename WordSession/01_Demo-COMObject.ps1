@@ -27,5 +27,5 @@ $selection.TypeText('test3')
 $doc.SaveAs([ref]$FilePathWord, [ref] [Microsoft.Office.Interop.Word.WdSaveFormat]::wdFormatDocumentDefault)
 $doc.SaveAs([ref]$FilePathPDF, [ref] [Microsoft.Office.Interop.Word.WdSaveFormat]::wdFormatPDF)
 
-$doc.Close([Microsoft.Office.Interop.Word.WdSaveOptions]::wdDoNotSaveChanges)
-$word.Quit()
+#$doc.Close([Microsoft.Office.Interop.Word.WdSaveOptions]::wdDoNotSaveChanges)
+#$word.Quit()

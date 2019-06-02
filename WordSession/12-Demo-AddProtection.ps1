@@ -11,4 +11,4 @@ Add-WordText -WordDocument $WordDocument -Text 'This is text that has font size 
 
 Add-WordProtection -WordDocument $WordDocument -EditRestrictions readOnly -Password '12345678'
 
-Save-WordDocument $WordDocument -Supress $True
+Save-WordDocument $WordDocument -Supress $True -OpenDocument

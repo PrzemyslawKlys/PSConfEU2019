@@ -7,7 +7,7 @@ if ($null -eq $ADForest) {
 
 $CompanyName = 'Evotec'
 
-Documentimo -FilePath "$PSScriptRoot\Starter-AD.docx" {
+Documentimo -FilePath "$PSScriptRoot\20-Documentimo-AD.docx" {
     DocTOC -Title 'Table of content'
 
     DocPageBreak

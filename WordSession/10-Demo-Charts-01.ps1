@@ -1,4 +1,4 @@
-﻿Import-Module .\PSWriteWord.psd1 -Force
+﻿Import-Module PSWriteWord -Force
 
 $FilePath = "$PSScriptRoot\10-Demo-01.docx"
 

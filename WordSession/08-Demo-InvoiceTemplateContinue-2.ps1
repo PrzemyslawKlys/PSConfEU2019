@@ -2,7 +2,7 @@ Import-Module PSWriteWord -Force
 
 ### Before running this script make sure to run Example-CreateWord first
 $FilePathTemplate = "$PSScriptRoot\Templates\WordTemplate-InvoiceWithLogo.docx"
-$FilePathInvoice = "$PSScriptRoot\08_Word-InvoiceTemplate.docx"
+$FilePathInvoice = "$PSScriptRoot\08-Demo-InvoiceTemplate.docx"
 
 $FilePathImage = "$PSScriptRoot\Images\Logo-Evotec-Small.jpg"
 

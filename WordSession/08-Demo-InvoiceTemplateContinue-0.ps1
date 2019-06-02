@@ -1,7 +1,7 @@
 ﻿Import-Module PSWriteWord #-Force
 
 $FilePathTemplate = "$PSScriptRoot\Templates\WordTemplate-Invoice.docx"
-$FilePathInvoice = "$PSScriptRoot\07_Word-InvoiceTemplate.docx"
+$FilePathInvoice = "$PSScriptRoot\08-Demo-InvoiceTemplate.docx"
 
 $WordDocument = Get-WordDocument -FilePath $FilePathTemplate
 
