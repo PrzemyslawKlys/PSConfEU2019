@@ -21,10 +21,10 @@ Dashboard -Name 'Dashimo Test' -FilePath "$PSScriptRoot\06-Demo-02.html" -Show {
     foreach ($Domain in $DataSetForest.FoundDomains.Keys) {
         Section -Name "Domain Users $Domain" {
             Table -DataTable $DataSetForest.FoundDomains.$Domain.DomainUsers {
-                TableConditionalFormatting -Name 'PasswordLastChanged(Days)' -ComparisonType number -Operator gt -Value 30 -BackgroundColor Beige
-                TableConditionalFormatting -Name 'PasswordLastChanged(Days)' -ComparisonType number -Operator gt -Value 90 -BackgroundColor RosyBrown
-                TableConditionalFormatting -Name 'PasswordLastChanged(Days)' -ComparisonType number -Operator lt -Value 30 -BackgroundColor Aquamarine
-                TableConditionalFormatting -Name 'PasswordLastChanged(Days)' -ComparisonType number -Operator lt -Value 10 -BackgroundColor Green
+                TableConditionalFormatting -Name 'PasswordLastChanged(Days)' -ComparisonType number -Operator gt -Value 3 -BackgroundColor Beige
+                TableConditionalFormatting -Name 'PasswordLastChanged(Days)' -ComparisonType number -Operator gt -Value 4 -BackgroundColor RosyBrown
+               # TableConditionalFormatting -Name 'PasswordLastChanged(Days)' -ComparisonType number -Operator lt -Value 30 -BackgroundColor Aquamarine
+               # TableConditionalFormatting -Name 'PasswordLastChanged(Days)' -ComparisonType number -Operator lt -Value 10 -BackgroundColor Green
             }
         }
     }
